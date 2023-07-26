@@ -1,4 +1,5 @@
-import ExpenseItem from "./component/ExpenseItem"
+
+import NewExpense from "./component/NewExpense";
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       amount: 234,
       data: new Date(2020, 4, 4)
     },
-    { id: "e2", title: "Car isurance", amount: 45, data: new Date(2021, 1, 3) },
+    { id: "e2", title: "Jet isurance", amount: 45, data: new Date(2021, 1, 3) },
     {
       id: "e3",
       title: "Car isurance",
@@ -22,11 +23,7 @@ function App() {
   return (
     <div className="h-screen flex flex-col gap-2 bg-gray-700">
       <h1>Lets get started</h1>
-      <ExpenseItem title={expense[0].title} amount={expense[0].amount} date={expense[0].data}/>
-      <ExpenseItem title={expense[1].title} amount={expense[1].amount} date={expense[1].data}/>
-      <ExpenseItem title={expense[2].title} amount={expense[2].amount} date={expense[2].data}/>
-      <ExpenseItem title={expense[3].title} amount={expense[3].amount} date={expense[3].data}/>
-      
+        <NewExpense items = {expense}/>
     </div>
   )
 }
